@@ -3,7 +3,7 @@ import { BsGithub } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
 
-const ProjectsCard = ({ title, des, src }) => {
+const ProjectsCard = ({ title, des, src, repositoryLink }) => {
   const handleButtonClickGH = () => {
     const GitHubProfileUrl = 'https://github.com/UjjwalSuman';
     window.open(GitHubProfileUrl, '_blank');

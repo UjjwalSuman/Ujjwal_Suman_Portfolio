@@ -2,11 +2,27 @@ import React, { useState } from 'react'
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import {logo} from "../../assets/index"
 import { navLinksdata } from '../../constants';
 
 const Navbar = () => {
+
+  const handleButtonClickLD = () => {
+    const linkedInProfileUrl = 'https://www.linkedin.com/in/ujjwalsuman/';
+    window.open(linkedInProfileUrl, '_blank');
+    }
+  
+    const handleButtonClickGH = () => {
+      const GitHubProfileUrl = 'https://github.com/UjjwalSuman';
+      window.open(GitHubProfileUrl, '_blank');
+    }
+  
+    const handleButtonClickIG = () => {
+      const InstagramProfileUrl = 'https://www.instagram.com/ujjwal_suman/';
+      window.open(InstagramProfileUrl, '_blank');
+    }
+
   const [showMenu, setShowMenu]=useState(false)
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
@@ -45,9 +61,9 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                  Experienced and dedicated Frontend Developer with 2.2 years of experience. 
+                  Proficient in JavaScript, ReactJs, ReduxJs, Tailwinds CSS, and Virtual DOM. 
+                  I'm committed to creating user-centric web designs.
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -74,17 +90,15 @@ const Navbar = () => {
                 <h2 className="text-base uppercase font-titleFont mb-4">
                   Find me in
                 </h2>
-                <div className="flex gap-4">
-                  <span className="bannerIcon">
-                    <FaFacebookF />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaTwitter />
-                  </span>
-                  <span className="bannerIcon">
-                    <FaLinkedinIn />
-                  </span>
-                </div>
+                <button onClick={handleButtonClickGH} className="bannerIcon">
+                  <FaGithub />
+                </button>
+                <button onClick={handleButtonClickLD} className="bannerIcon">
+                  <FaLinkedinIn />
+                </button>
+                <button onClick={handleButtonClickIG} className="bannerIcon">
+                  <FaInstagram />
+                </button>
               </div>
               <span
                 onClick={() => setShowMenu(false)}
