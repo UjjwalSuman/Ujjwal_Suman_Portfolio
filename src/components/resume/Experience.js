@@ -19,19 +19,21 @@ const Experience = () => {
               title="System Engineer"
               subTitle="TCS - (2021 - Present)"
               result="Ahmedabad"
-              des="Google's hiring process is an important part of our culture. Googlers care deeply about their teams and the people who make them up."
+              des="Develop and maintain web applications using React-JS, ensuring high performance and scalability. Implement state management with redux to enhance application efficiency and maintainability"
             />
             <ResumeCard
               title="Frontend Developer Intern"
               subTitle="Accuments - (2021 - 2021)"
               result="WFH"
-              des="A popular destination with a growing number of highly qualified homegrown graduates, it's true that securing a role in Malaysia isn't easy."
+              des="We have developed responsive web interfaces with HTML, CSS, JavaScript, and React."
             />
             <ResumeCard
               title="Data Analyst Trainee "
               subTitle="Tata Steel Ltd - (2019 - 2019)"
               result="Jharkhand"
-              des="The Oman economy has grown strongly over recent years, having transformed itself from a producer and innovation-based economy."
+              des="We conducted data analysis using tools like Python, R, or Excel.
+                  Collaborated with cross-functional teams to understand data requirements.
+                  "
             />
         </div>
       </div>
