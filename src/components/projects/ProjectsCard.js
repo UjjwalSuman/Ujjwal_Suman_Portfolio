@@ -1,12 +1,13 @@
 import React from 'react'
-import { BsGithub } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
 
-const ProjectsCard = ({ title, des, src, repositoryLink }) => {
+const ProjectsCard = ({ title, des, src, repositoryLink,repositoryWebsiteLink, showGlobeIcon  }) => {
   const handleButtonClickGH = () => {
-    const GitHubProfileUrl = 'https://github.com/UjjwalSuman';
-    window.open(GitHubProfileUrl, '_blank');
+    window.open(repositoryLink, '_blank');
+  }
+  const handleButtonClickGlobe = () => {
+    window.open(repositoryWebsiteLink, '_blank');
   }
 
   return (
@@ -25,9 +26,11 @@ const ProjectsCard = ({ title, des, src, repositoryLink }) => {
               {title}
             </h3>
             <div className="flex gap-2">
-              {/* <button  className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
-                <BsGithub />
-              </button> */}
+              {showGlobeIcon && (
+              <button  onClick={handleButtonClickGlobe} className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
+                <FaGlobe />
+              </button>
+              )}
               <button onClick={handleButtonClickGH} className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
                 <FaGithub />
               </button>

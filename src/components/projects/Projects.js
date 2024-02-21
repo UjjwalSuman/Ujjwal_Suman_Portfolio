@@ -17,20 +17,27 @@ const Projects = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
         <ProjectsCard
+          title="Apnaasiyana"
+          des=" Explore Apnaasiyana.com for secure authentication, CRUD operations, user-friendly features, and advanced search functionalities. Find your dream property today!"
+          src={projectTwo}
+          showGlobeIcon ={true}
+          repositoryLink="https://github.com/UjjwalSuman/Real-Estate"
+          repositoryWebsiteLink="https://apnaasiyana.onrender.com/"
+        />
+        <ProjectsCard
           title="StudyNotion"
           des=" It is a website in which students can learn and here we can have the log-in and sign-in 
           functionality to the website and we can access courses"
           src={projectOne}
-        />
-        <ProjectsCard
-          title="Blogs"
-          des=" Here You can write your blog and you can also edit and remove the blogs as per the requirements"
-          src={projectTwo}
+          repositoryLink="https://github.com/UjjwalSuman/StudyNotionWithUjjwalSuman"
+          showGlobeIcon={false}
         />
         <ProjectsCard
           title="Render-Gif-Generator"
           des=" We can render gifs by searching what we want to search."
           src={projectThree}
+          repositoryLink="https://github.com/UjjwalSuman/Render_Gif_Generator"
+          showGlobeIcon={false}
         />
       </div>
     </section>
